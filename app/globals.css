@@ -8,19 +8,26 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  /* Font works even if sometimes I'm not sure how. */
+  --font-sans: var(--font-montserrat-sans);
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  /* Text size works. */
+  --font-base: 15px;
+
+  /* Colors */
+  /* Primary */
+  /* Linear gradient: */
+  /* hsl(237, 73%, 79%) to hsl(238, 63%, 64%) */
+
+  /* Neutral */
+  --color-blue-50: hsl(240, 78%, 98%);
+  --color-gray-650: hsl(233, 13%, 49%);
+  --color-gray-700: hsl(232, 13%, 33%);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  font-size: var(--font-base);
 }
