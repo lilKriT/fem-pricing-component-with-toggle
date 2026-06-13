@@ -35,7 +35,17 @@ export default function Home() {
     >
       <div className="flex flex-col justify-center items-center mx-[2%] my-16 w-full max-w-7xl">
         <h1 className="text-5xl text-gray-650">Our Pricing</h1>
-        <p> Annually Monthly</p>
+
+        <label className="text-gray-650/60 cursor-pointer flex items-center justify-center gap-6">
+          <span>Annually</span>
+
+          <div className="relative w-16 h-8 gradient rounded-full peer-checked:w-20">
+            <input type="checkbox" className="sr-only peer" />
+            <div className="absolute top-1 left-1 w-6 aspect-square rounded-full bg-blue-50 peer-checked:translate-x-8 motion-safe:duration-300 ease-in-out"></div>
+          </div>
+
+          <span>Monthly</span>
+        </label>
 
         {/* Cards */}
         <div className="mt-8 grid grid-cols-3 grid-rows-[24px_1fr_24px] w-full">
