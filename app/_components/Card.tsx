@@ -10,8 +10,8 @@ interface IProps {
 const Card = ({ isPremium, title, price, features }: IProps) => {
   return (
     <article
-      className={`${isPremium ? "row-start-1 row-end-4 gradient py-18 text-blue-50 rounded-3xl" : "row-start-2 bg-white"} 
-      text-center flex flex-col gap-8 justify-center px-12 py-8 first:rounded-l-3xl last:rounded-r-3xl
+      className={`${isPremium ? "row-start-1 row-end-4 gradient py-18 text-blue-50 rounded-lg" : "row-start-2 bg-white"} 
+      text-center flex flex-col gap-8 justify-center px-12 py-8 first:rounded-l-lg last:rounded-r-lg
       shadow-2xl`}
     >
       <h2 className="text-2xl">{title}</h2>
@@ -22,7 +22,10 @@ const Card = ({ isPremium, title, price, features }: IProps) => {
       {/* Features */}
       <div>
         {features.map((f, idx) => (
-          <p key={idx} className="border-t last-of-type:border-b py-3">
+          <p
+            key={idx}
+            className={`${isPremium ? "border-blue-50/40" : "border-gray-650/30"} border-t last-of-type:border-b py-3`}
+          >
             {f}
           </p>
         ))}

@@ -30,11 +30,11 @@ export default function Home() {
   return (
     <section
       className="min-h-dvh bg-[url('/bg-bottom.svg'),url('/bg-top.svg')] bg-no-repeat 
-    bg-position-[left_0px_bottom_0px,right_0px_top_0px] bg-size-[auto_400px,100px_100px]
+    bg-position-[left_0px_bottom_0px,right_0px_top_0px] bg-size-[auto_35%,auto_75%]
     flex justify-center items-center"
     >
       <div className="flex flex-col justify-center items-center mx-[2%] my-16 w-full max-w-7xl">
-        <h1 className="text-5xl text-gray-700">Our Pricing</h1>
+        <h1 className="text-5xl text-gray-650">Our Pricing</h1>
         <p> Annually Monthly</p>
 
         {/* Cards */}
