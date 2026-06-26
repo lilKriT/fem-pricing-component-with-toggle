@@ -1,4 +1,5 @@
 import Link from "next/link";
+import AnimatedPrice from "./AnimatedPrice";
 
 interface IProps {
   plan: Plan;
@@ -17,7 +18,8 @@ const Card = ({ plan, monthly }: IProps) => {
     >
       <h2 className="text-2xl">{title}</h2>
       <p className="text-7xl flex items-center justify-center gap-2">
-        <span className="text-4xl">$</span> {priceToDisplay}
+        <span className="text-4xl">$</span>{" "}
+        <AnimatedPrice value={priceToDisplay} />
       </p>
 
       {/* Features */}
@@ -35,10 +37,10 @@ const Card = ({ plan, monthly }: IProps) => {
       {/* Link */}
       <Link
         href={"#"}
-        className={`${isPremium ? "bg-blue-50" : "gradient"} uppercase rounded-lg tracking-widest py-3`}
+        className={`${isPremium ? "bg-blue-50 hover:bg-transparent" : "gradient hover:bg-none! "} group border motion-safe:duration-150 uppercase rounded-lg tracking-widest py-3`}
       >
         <span
-          className={`${isPremium ? "gradient bg-clip-text text-transparent" : "text-blue-50"}`}
+          className={`${isPremium ? "gradient bg-clip-text text-transparent group-hover:text-blue-50 motion-safe:duration-150" : "text-blue-50 group-hover:text-[hsl(238_63%_64%)]"} motion-safe:duration-150`}
         >
           Learn More
         </span>

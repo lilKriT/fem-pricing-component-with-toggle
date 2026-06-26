@@ -26,6 +26,7 @@ const Plans: Plan[] = [
 
 export default function Home() {
   const [monthly, setMonthly] = useState(false);
+
   useEffect(() => {
     console.log("changing state");
     console.log(monthly);
@@ -45,16 +46,19 @@ export default function Home() {
         <label className="text-gray-650/60 cursor-pointer flex items-center justify-center gap-6">
           <span>Annually</span>
 
-          <div className="relative w-16 h-8 gradient rounded-full peer-checked:w-20">
-            <input
-              type="checkbox"
-              className="sr-only peer"
-              checked={monthly}
-              onChange={(e) => {
-                setMonthly(e.target.checked);
-              }}
-            />
-            <div className="absolute top-1 left-1 w-6 aspect-square rounded-full bg-blue-50 peer-checked:translate-x-8 motion-safe:duration-300 ease-in-out"></div>
+          <div className="relative w-16 h-8 bg-linear-to-r from-[hsl(237_73%_79%)] to-[hsl(238_63%_64%)] hover:from-[hsla(237_73%_79%/0.5)] hover:to-[hsla(238_63%_64%/0.5)] motion-safe:duration-150 rounded-full peer-checked:w-20">
+            <form>
+              <input
+                autoComplete="off"
+                type="checkbox"
+                className="sr-only peer"
+                checked={monthly}
+                onChange={(e) => {
+                  setMonthly(e.target.checked);
+                }}
+              />
+              <div className="absolute top-1 left-1 w-6 aspect-square rounded-full bg-blue-50 peer-checked:translate-x-8 motion-safe:duration-300 ease-in-out"></div>
+            </form>
           </div>
 
           <span>Monthly</span>
