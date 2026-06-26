@@ -12,12 +12,12 @@ const Card = ({ plan, monthly }: IProps) => {
 
   return (
     <article
-      className={`${isPremium ? "row-start-1 row-end-4 gradient py-18 text-blue-50 rounded-lg" : "row-start-2 bg-white"} 
-      text-center flex flex-col gap-8 justify-center px-12 py-8 first:rounded-l-lg last:rounded-r-lg
+      className={`${isPremium ? "md:row-start-1 md:row-end-4 gradient md:py-18 text-blue-50 rounded-lg" : "md:row-start-2 bg-white"} 
+      text-center flex flex-col gap-8 justify-center px-12 py-8 rounded-lg md:first:rounded-r-none md:last:rounded-l-none
       shadow-2xl`}
     >
       <h2 className="text-2xl">{title}</h2>
-      <p className="text-7xl flex items-center justify-center gap-2">
+      <p className="text-7xl text-[clamp(3.5rem,10vw,4.5rem)] flex items-center justify-center gap-2">
         <span className="text-4xl">$</span>{" "}
         <AnimatedPrice value={priceToDisplay} />
       </p>
