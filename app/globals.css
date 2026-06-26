@@ -39,3 +39,30 @@ body {
 .gradient {
   @apply bg-linear-to-br from-[hsl(237_73%_79%)] to-[hsl(238_63%_64%)];
 }
+
+.btn {
+  @apply bg-linear-to-br from-[hsl(237_73%_79%)] to-[hsl(238_63%_64%)] py-3 rounded-lg  relative overflow-hidden;
+  @apply uppercase tracking-widest;
+  @apply before:absolute before:inset-[2px] before:rounded-[6px] before:bg-blue-50;
+  @apply before:opacity-0 hover:before:opacity-100 motion-safe:before:duration-300 before:ease-in-out;
+
+  span {
+    @apply text-blue-50 relative motion-safe:duration-300 ease-in-out;
+  }
+
+  &:hover span {
+    @apply text-[hsl(237_73%_79%)] text-[hsl(238_63%_64%)] motion-safe:duration-300 ease-in-out;
+  }
+}
+
+.btn--premium {
+  @apply bg-none bg-blue-50 before:bg-linear-to-br before:from-[hsl(237_73%_79%)] before:to-[hsl(238_63%_64%)];
+
+  span {
+    @apply text-[hsl(238_63%_64%)];
+  }
+
+  &:hover span {
+    @apply text-blue-50;
+  }
+}

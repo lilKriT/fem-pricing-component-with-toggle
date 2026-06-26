@@ -35,15 +35,8 @@ const Card = ({ plan, monthly }: IProps) => {
       </div>
 
       {/* Link */}
-      <Link
-        href={"#"}
-        className={`${isPremium ? "bg-blue-50 hover:bg-transparent" : "gradient hover:bg-none! "} group border motion-safe:duration-150 uppercase rounded-lg tracking-widest py-3`}
-      >
-        <span
-          className={`${isPremium ? "gradient bg-clip-text text-transparent group-hover:text-blue-50 motion-safe:duration-150" : "text-blue-50 group-hover:text-[hsl(238_63%_64%)]"} motion-safe:duration-150`}
-        >
-          Learn More
-        </span>
+      <Link href={"#"} className={`btn ${isPremium && "btn--premium"}`}>
+        <span>Learn More</span>
       </Link>
     </article>
   );
